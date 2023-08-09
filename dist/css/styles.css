@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+/* #FFFFFF */
+/* #EEEEEE */
+/* #DDDDDD */
+/* #828282 */
+/* #666666 */
+/* #101010 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  width: 100vw;
+  min-width: 100vw;
+  max-width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  background-color: hsl(0, 0%, 93%);
+  overflow: hidden;
+}
+
+.cowboy {
+  width: 100%;
+  height: 100%;
+  padding: 10vh 10vw 0 10vw;
+}
+.cowboy img {
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+/*# sourceMappingURL=styles.css.map */
