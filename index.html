@@ -18,10 +18,27 @@
 
 <body>
 
-    <section class="cowboy">
-
+    <section class="cowboy-home" id="home">
+        <h1 class="cowboy__title">Alors cowboy...Tu cliques ?</h1>
         <img src="/dist/images/cowboy.svg" alt="Le cowboy">
+        <a class="cowboy__bouton" href="#rules">Jouer</a>
+    </section>
 
+    <section class="cowboy-rules" id="rules">
+        <img src="/dist/images/cowboy.svg" alt="Le cowboy">
+        <h2 class="cowboy__title">Le but est simple,<br><span class="line-through">tirer</span> cliquer le premier.</h2>
+        <p class="cowboy__text">Clique le plus rapidement possible sur l'écran lorsque *clic* apparaît.</p>
+        <a class="cowboy__bouton" href="#play">Ok</a>
+    </section>
+
+    <section class="cowboy-play" id="play">
+        <h2 class="cowboy__title">T'es prêt ?</h2>
+    </section>
+
+    <section class="cowboy-results" id="results">
+        <h2 class="cowboy__title">T'es pas mauvais.</h2>
+        <p class="cowboy__text">T'as cliqué en <span id="clickDelay"></span> !</p>
+        <a class="cowboy__bouton" href="#play">Rejouer</a>
     </section>
 
 <!-- Scripts -->
