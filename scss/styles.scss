@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap');
 
-$white : hsl(0, 0%, 100%); /* #FFFFFF */
-$lighter-grey : hsl(0, 0%, 93%); /* #EEEEEE */
-$light-grey : hsl(0, 0%, 87%); /* #DDDDDD */
-$medium-grey : hsl(0, 0%, 51%); /* #828282 */
-$grey : hsl(0, 0%, 40%); /* #666666 */
-$dark : hsl(0, 0%, 6%); /* #101010 */
+$white : hsl(0, 0%, 100%);
+$lighter-grey : hsl(0, 0%, 93%);
+$light-grey : hsl(0, 0%, 87%);
+$medium-grey : hsl(0, 0%, 51%);
+$grey : hsl(0, 0%, 40%);
+$dark : hsl(0, 0%, 6%);
 
 * {
     margin: 0;
@@ -36,8 +36,11 @@ section,
     flex-direction: column;
     justify-content: center;
     &__title {
-        font-size: 3rem;
+        font-size: 2rem;
         font-weight: 900;
+        @media screen and (min-width:426px) {
+            font-size: 3rem;
+        }
         .line-through {
             font-size: inherit;
             font-weight: inherit;
@@ -64,19 +67,26 @@ section,
 .cowboy {
     &-home {
         img {
-            width: 25%;
+            width: 50%;
             margin: 25px auto 0 auto;
             display: block;
+            @media screen and (min-width:426px) {
+                width: 25%;
+            }
         }
     }
     &-rules {
         position: relative;
         img {
             width: 20%;
+            display: none;
             position: absolute;
             bottom: -7.5%;
             left: calc(50% - 10%);
             z-index: -1;
+            @media screen and (min-width:426px) {
+                display: block;
+            }
         }
     }
 }

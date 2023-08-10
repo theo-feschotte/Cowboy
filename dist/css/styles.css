@@ -1,10 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap");
-/* #FFFFFF */
-/* #EEEEEE */
-/* #DDDDDD */
-/* #828282 */
-/* #666666 */
-/* #101010 */
 * {
   margin: 0;
   padding: 0;
@@ -36,8 +30,14 @@ section,
 }
 section__title,
 .cowboy__title {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 900;
+}
+@media screen and (min-width: 426px) {
+  section__title,
+  .cowboy__title {
+    font-size: 3rem;
+  }
 }
 section__title .line-through,
 .cowboy__title .line-through {
@@ -64,19 +64,30 @@ section__bouton,
 }
 
 .cowboy-home img {
-  width: 25%;
+  width: 50%;
   margin: 25px auto 0 auto;
   display: block;
+}
+@media screen and (min-width: 426px) {
+  .cowboy-home img {
+    width: 25%;
+  }
 }
 .cowboy-rules {
   position: relative;
 }
 .cowboy-rules img {
   width: 20%;
+  display: none;
   position: absolute;
   bottom: -7.5%;
   left: 40%;
   z-index: -1;
+}
+@media screen and (min-width: 426px) {
+  .cowboy-rules img {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
