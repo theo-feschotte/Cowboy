@@ -66,7 +66,7 @@ section,
 
 .cowboy {
     &-home {
-        img {
+        svg {
             width: 50%;
             margin: 25px auto 0 auto;
             display: block;
@@ -88,5 +88,68 @@ section,
                 display: block;
             }
         }
+    }
+}
+
+// Cowboy SVG
+.shadow {
+    fill:#ddd;
+}
+
+.body,
+.arms,
+.nose {
+    fill:#828282;
+}
+
+.head {
+    fill:#fff;
+}
+
+.hat,
+.revolver {
+    fill:#101010;
+}
+
+.scarf,
+.belt {
+    fill:#666;
+}
+
+.arm-ready {
+    display: none;
+}
+.arms-ready {
+    .arm-steady {
+        display: none;
+    }
+    .arm-ready {
+        display: initial;
+    }
+}
+
+.tooltip {
+    width: 136px;
+    padding: 10px 15px;
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    color: $white;
+    text-align: center;
+    border-radius: 5px;
+    background-color: $grey;
+    opacity: 0;
+    transition: ease 0.25s;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 25%;
+        border: solid 10px;
+        border-color: $grey transparent transparent $grey;
+    }
+    &--visible {
+        opacity: 1;
+        transition: ease 0.5s;
     }
 }

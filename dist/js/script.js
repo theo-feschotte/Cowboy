@@ -3,8 +3,14 @@ const sectionRules = document.getElementById("rules");
 const sectionPlay = document.getElementById("play");
 const sectionResults = document.getElementById("results");
 
+const goRules = sectionHome.getElementsByTagName("a")[0];
 const goPlay = sectionRules.getElementsByTagName("a")[0];
 const goReplay = sectionResults.getElementsByTagName("a")[0];
+
+const cowboySVG = document.getElementById("cowboySVG");
+const cowboySVGbody = cowboySVG.getElementsByClassName("body")[0];
+const cowboySVGarms = cowboySVG.getElementsByClassName("arms")[0];
+// const cowboyTooltip = sectionHome.getElementsByClassName("tooltip")[0];
 
 var sectionPlayTitle = sectionPlay.getElementsByTagName("h2")[0];
 var sectionResultsTitle = sectionResults.getElementsByTagName("h2")[0];
@@ -44,6 +50,15 @@ let punchLinesBad = { // 1 < clickDelay
     13: "T'as compris le but du jeu ?",
     13: "Ça va, t'as pris ton temps ?",
 };
+
+goRules.addEventListener("mouseover", function() {
+    cowboySVGarms.classList.add("arms-ready");
+    // cowboyTooltip.classList.add("tooltip--visible");
+});
+goRules.addEventListener("mouseout", function() {
+    cowboySVGarms.classList.remove("arms-ready");
+    // cowboyTooltip.classList.remove("tooltip--visible");
+});
 
 function goToURL(sectionID) {
     window.location.href = window.location.origin + "/#" + sectionID.id;
