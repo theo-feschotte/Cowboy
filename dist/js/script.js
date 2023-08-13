@@ -7,7 +7,7 @@ const goRules = sectionHome.getElementsByTagName("a")[0];
 const goPlay = sectionRules.getElementsByTagName("a")[0];
 const goReplay = sectionResults.getElementsByTagName("a")[0];
 
-const cowboySVG = document.getElementById("cowboySVG");
+const cowboySVG = document.getElementsByClassName("cowboySVG")[0];
 const cowboySVGbody = cowboySVG.getElementsByClassName("body")[0];
 const cowboySVGarms = cowboySVG.getElementsByClassName("arms")[0];
 const cowboyTooltip = sectionHome.getElementsByClassName("tooltip")[0];
@@ -60,17 +60,6 @@ let punchLinesBad = { // 1 < clickDelay
     14: "Ça va, t'as pris ton temps ?",
 };
 
-goRules.addEventListener("mouseover", function() {
-    cowboySVGarms.classList.add("arms-ready");
-    cowboyTooltip.classList.add("tooltip--visible");
-    let i = Math.floor(Math.random() * (Object.keys(punchLinesTooltip).length - 1 + 1)) + 1;
-    tooltipText.innerText = punchLinesTooltip[i];
-});
-goRules.addEventListener("mouseout", function() {
-    cowboySVGarms.classList.remove("arms-ready");
-    cowboyTooltip.classList.remove("tooltip--visible");
-});
-
 function goToURL(sectionID) {
     window.location.href = window.location.origin + "/#" + sectionID.id;
 };
@@ -119,6 +108,17 @@ function play() {
         }, randomDelay);
     }, 1000);
 };
+
+goRules.addEventListener("mouseover", function() {
+    cowboySVGarms.classList.add("arms-ready");
+    cowboyTooltip.classList.add("tooltip--visible");
+    let i = Math.floor(Math.random() * (Object.keys(punchLinesTooltip).length - 1 + 1)) + 1;
+    tooltipText.innerText = punchLinesTooltip[i];
+});
+goRules.addEventListener("mouseout", function() {
+    cowboySVGarms.classList.remove("arms-ready");
+    cowboyTooltip.classList.remove("tooltip--visible");
+});
 
 goPlay.addEventListener("click", play);
 goReplay.addEventListener("click", play);

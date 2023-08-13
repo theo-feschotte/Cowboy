@@ -59,51 +59,106 @@ section__bouton,
   font-weight: 900;
   text-transform: uppercase;
   text-decoration: none;
+  border: solid 3px hsl(0, 0%, 6%);
   border-radius: 100px;
   background-color: hsl(0, 0%, 6%);
 }
-
-.cowboy-home__container {
-  margin-top: 25px;
-  position: relative;
+section__bouton--quit,
+.cowboy__bouton--quit {
+  padding: 0;
+  color: hsl(0, 0%, 40%);
+  border-color: transparent;
+  background-color: transparent;
 }
-.cowboy-home__container #cowboySVG {
+section__bouton--quit:hover,
+.cowboy__bouton--quit:hover {
+  color: hsl(0, 0%, 6%);
+  text-decoration: underline;
+}
+section .cowboySVG,
+section img,
+.cowboy .cowboySVG,
+.cowboy img {
   width: 50%;
   margin: 0 auto;
   display: block;
 }
 @media screen and (min-width: 426px) {
-  .cowboy-home__container #cowboySVG {
+  section .cowboySVG,
+  section img,
+  .cowboy .cowboySVG,
+  .cowboy img {
     width: 25%;
   }
 }
-.cowboy-home__container #cowboySVG .shadow {
+section .cowboySVG .shadow,
+section img .shadow,
+.cowboy .cowboySVG .shadow,
+.cowboy img .shadow {
   fill: #DDDDDD;
 }
-.cowboy-home__container #cowboySVG .body,
-.cowboy-home__container #cowboySVG .arms,
-.cowboy-home__container #cowboySVG .nose {
+section .cowboySVG .body,
+section .cowboySVG .arms,
+section .cowboySVG .nose,
+section img .body,
+section img .arms,
+section img .nose,
+.cowboy .cowboySVG .body,
+.cowboy .cowboySVG .arms,
+.cowboy .cowboySVG .nose,
+.cowboy img .body,
+.cowboy img .arms,
+.cowboy img .nose {
   fill: #828282;
 }
-.cowboy-home__container #cowboySVG .head {
+section .cowboySVG .head,
+section img .head,
+.cowboy .cowboySVG .head,
+.cowboy img .head {
   fill: #FFFFFF;
 }
-.cowboy-home__container #cowboySVG .hat,
-.cowboy-home__container #cowboySVG .revolver {
+section .cowboySVG .hat,
+section .cowboySVG .revolver,
+section img .hat,
+section img .revolver,
+.cowboy .cowboySVG .hat,
+.cowboy .cowboySVG .revolver,
+.cowboy img .hat,
+.cowboy img .revolver {
   fill: #101010;
 }
-.cowboy-home__container #cowboySVG .scarf,
-.cowboy-home__container #cowboySVG .belt {
+section .cowboySVG .scarf,
+section .cowboySVG .belt,
+section img .scarf,
+section img .belt,
+.cowboy .cowboySVG .scarf,
+.cowboy .cowboySVG .belt,
+.cowboy img .scarf,
+.cowboy img .belt {
   fill: #666666;
 }
-.cowboy-home__container #cowboySVG .arm-ready {
+section .cowboySVG .arm-ready,
+section img .arm-ready,
+.cowboy .cowboySVG .arm-ready,
+.cowboy img .arm-ready {
   display: none;
 }
-.cowboy-home__container #cowboySVG .arms-ready .arm-steady {
+section .cowboySVG .arms-ready .arm-steady,
+section img .arms-ready .arm-steady,
+.cowboy .cowboySVG .arms-ready .arm-steady,
+.cowboy img .arms-ready .arm-steady {
   display: none;
 }
-.cowboy-home__container #cowboySVG .arms-ready .arm-ready {
+section .cowboySVG .arms-ready .arm-ready,
+section img .arms-ready .arm-ready,
+.cowboy .cowboySVG .arms-ready .arm-ready,
+.cowboy img .arms-ready .arm-ready {
   display: initial;
+}
+
+.cowboy-home__container {
+  margin-top: 25px;
+  position: relative;
 }
 .cowboy-home__container .tooltip {
   padding: 10px 15px;
@@ -134,17 +189,16 @@ section__bouton,
 .cowboy-rules {
   position: relative;
 }
-.cowboy-rules img {
-  width: 20%;
+.cowboy-rules__container img {
   display: none;
-  position: absolute;
-  bottom: -7.5%;
-  left: 40%;
-  z-index: -1;
 }
 @media screen and (min-width: 426px) {
-  .cowboy-rules img {
+  .cowboy-rules__container img {
+    width: 20%;
     display: block;
+    position: absolute;
+    bottom: -7.5%;
+    left: 40%;
   }
 }
 
