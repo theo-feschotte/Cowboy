@@ -63,14 +63,73 @@ section__bouton,
   background-color: hsl(0, 0%, 6%);
 }
 
-.cowboy-home svg {
+.cowboy-home__container {
+  margin-top: 25px;
+  position: relative;
+}
+.cowboy-home__container #cowboySVG {
   width: 50%;
-  margin: 25px auto 0 auto;
+  margin: 0 auto;
   display: block;
 }
 @media screen and (min-width: 426px) {
-  .cowboy-home svg {
+  .cowboy-home__container #cowboySVG {
     width: 25%;
+  }
+}
+.cowboy-home__container #cowboySVG .shadow {
+  fill: #DDDDDD;
+}
+.cowboy-home__container #cowboySVG .body,
+.cowboy-home__container #cowboySVG .arms,
+.cowboy-home__container #cowboySVG .nose {
+  fill: #828282;
+}
+.cowboy-home__container #cowboySVG .head {
+  fill: #FFFFFF;
+}
+.cowboy-home__container #cowboySVG .hat,
+.cowboy-home__container #cowboySVG .revolver {
+  fill: #101010;
+}
+.cowboy-home__container #cowboySVG .scarf,
+.cowboy-home__container #cowboySVG .belt {
+  fill: #666666;
+}
+.cowboy-home__container #cowboySVG .arm-ready {
+  display: none;
+}
+.cowboy-home__container #cowboySVG .arms-ready .arm-steady {
+  display: none;
+}
+.cowboy-home__container #cowboySVG .arms-ready .arm-ready {
+  display: initial;
+}
+.cowboy-home__container .tooltip {
+  width: 136px;
+  padding: 10px 15px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  border-radius: 5px;
+  background-color: hsl(0, 0%, 40%);
+  opacity: 0;
+  transition: ease 0.25s;
+}
+.cowboy-home__container .tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 25%;
+  border: solid 10px;
+  border-color: hsl(0, 0%, 40%) transparent transparent hsl(0, 0%, 40%);
+}
+@media screen and (min-width: 769px) {
+  .cowboy-home__container .tooltip--visible {
+    opacity: 1;
+    transition: ease 0.5s;
   }
 }
 .cowboy-rules {
@@ -88,67 +147,6 @@ section__bouton,
   .cowboy-rules img {
     display: block;
   }
-}
-
-.shadow {
-  fill: #ddd;
-}
-
-.body,
-.arms,
-.nose {
-  fill: #828282;
-}
-
-.head {
-  fill: #fff;
-}
-
-.hat,
-.revolver {
-  fill: #101010;
-}
-
-.scarf,
-.belt {
-  fill: #666;
-}
-
-.arm-ready {
-  display: none;
-}
-
-.arms-ready .arm-steady {
-  display: none;
-}
-.arms-ready .arm-ready {
-  display: initial;
-}
-
-.tooltip {
-  width: 136px;
-  padding: 10px 15px;
-  position: absolute;
-  top: 34%;
-  left: 50%;
-  color: hsl(0, 0%, 100%);
-  text-align: center;
-  border-radius: 5px;
-  background-color: hsl(0, 0%, 40%);
-  opacity: 0;
-  transition: ease 0.25s;
-}
-.tooltip::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 25%;
-  border: solid 10px;
-  border-color: hsl(0, 0%, 40%) transparent transparent hsl(0, 0%, 40%);
-}
-.tooltip--visible {
-  opacity: 1;
-  transition: ease 0.5s;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -10,7 +10,7 @@ const goReplay = sectionResults.getElementsByTagName("a")[0];
 const cowboySVG = document.getElementById("cowboySVG");
 const cowboySVGbody = cowboySVG.getElementsByClassName("body")[0];
 const cowboySVGarms = cowboySVG.getElementsByClassName("arms")[0];
-// const cowboyTooltip = sectionHome.getElementsByClassName("tooltip")[0];
+const cowboyTooltip = sectionHome.getElementsByClassName("tooltip")[0];
 
 var sectionPlayTitle = sectionPlay.getElementsByTagName("h2")[0];
 var sectionResultsTitle = sectionResults.getElementsByTagName("h2")[0];
@@ -38,7 +38,7 @@ let punchLinesBad = { // 1 < clickDelay
     1: "T'es trop nul.",
     2: "T'es trop lent !",
     3: "Vraiment, c'est si compliqué ?",
-    4: "T'as pas fait d'efforts ?",
+    4: "T'as pas fait d'effort ?",
     5: "Une mamie ferait mieux que toi !",
     6: "Si t'y mets pas du tiens...",
     7: "Arrête là, tu me fais de la peine...",
@@ -53,11 +53,11 @@ let punchLinesBad = { // 1 < clickDelay
 
 goRules.addEventListener("mouseover", function() {
     cowboySVGarms.classList.add("arms-ready");
-    // cowboyTooltip.classList.add("tooltip--visible");
+    cowboyTooltip.classList.add("tooltip--visible");
 });
 goRules.addEventListener("mouseout", function() {
     cowboySVGarms.classList.remove("arms-ready");
-    // cowboyTooltip.classList.remove("tooltip--visible");
+    cowboyTooltip.classList.remove("tooltip--visible");
 });
 
 function goToURL(sectionID) {
