@@ -12,6 +12,7 @@ const cowboySVGbody = cowboySVG.getElementsByClassName("body")[0];
 const cowboySVGarms = cowboySVG.getElementsByClassName("arms")[0];
 const cowboyTooltip = sectionHome.getElementsByClassName("tooltip")[0];
 
+var tooltipText = sectionHome.getElementsByClassName("tooltip")[0];
 var sectionPlayTitle = sectionPlay.getElementsByTagName("h2")[0];
 var sectionResultsTitle = sectionResults.getElementsByTagName("h2")[0];
 var sectionResultsText = document.getElementById("clickDelay");
@@ -20,6 +21,14 @@ let randomDelay;
 let firstClick;
 let secondClick;
 let clickDelay;
+
+let punchLinesTooltip = {
+    1: "T'es pas cap.",
+    2: "Vas-y, clique !",
+    3: "Ose pour voir ?",
+    4: "T'es pas prêt.",
+    5: "Petit joueur...",
+};
 
 let punchLinesGood = { // clickDelay < 0.5
     1: "T'es pas mauvais.",
@@ -54,6 +63,8 @@ let punchLinesBad = { // 1 < clickDelay
 goRules.addEventListener("mouseover", function() {
     cowboySVGarms.classList.add("arms-ready");
     cowboyTooltip.classList.add("tooltip--visible");
+    let i = Math.floor(Math.random() * (Object.keys(punchLinesTooltip).length - 1 + 1)) + 1;
+    tooltipText.innerText = punchLinesTooltip[i];
 });
 goRules.addEventListener("mouseout", function() {
     cowboySVGarms.classList.remove("arms-ready");

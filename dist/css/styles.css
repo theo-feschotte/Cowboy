@@ -106,7 +106,6 @@ section__bouton,
   display: initial;
 }
 .cowboy-home__container .tooltip {
-  width: 136px;
   padding: 10px 15px;
   position: absolute;
   top: 0;
