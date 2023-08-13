@@ -17,6 +17,8 @@ var sectionPlayTitle = sectionPlay.getElementsByTagName("h2")[0];
 var sectionResultsTitle = sectionResults.getElementsByTagName("h2")[0];
 var sectionResultsText = document.getElementById("clickDelay");
 
+let firstTimeout;
+let secondTimeout;
 let randomDelay;
 let firstClick;
 let secondClick;
@@ -46,7 +48,7 @@ let punchLinesAverage = { // 0.5 < clickDelay && clickDelay < 1
 let punchLinesBad = { // 1 < clickDelay
     1: "T'es trop nul.",
     2: "T'es trop lent !",
-    3: "Vraiment, c'est si compliqué ?",
+    3: "Vraiment, c'est si compliqué que ça ?",
     4: "T'as pas fait d'effort ?",
     5: "Une mamie ferait mieux que toi !",
     6: "Si t'y mets pas du tiens...",
@@ -98,9 +100,9 @@ function play() {
     randomDelay = (Math.floor(Math.random() * (5 - 1 + 1)) + 1) * 1000;
     storeFirstClick();
     sectionPlayTitle.innerText = "T'es prêt ?";
-    setTimeout(function() {
+    firstTimeout = setTimeout(function() {
         sectionPlayTitle.innerText = "T'es sûr ?";
-        setTimeout(function() {
+        secondTimeout = setTimeout(function() {
             sectionPlayTitle.innerText = "*clic*";
             sectionPlay.addEventListener("click", function() {
                 storeSecondClick();
