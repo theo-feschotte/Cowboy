@@ -38,10 +38,10 @@ let punchLinesGood = { // clickDelay < 0.5
 };
 let punchLinesAverage = { // 0.5 < clickDelay && clickDelay < 1
     1: "Tu peux mieux faire.",
-    1: "Tu t'es pas foulé...",
-    1: "Pense à cliquer la prochaine fois !",
-    2: "La chance du débutant !",
-    4: "Cowboy en carton !",
+    2: "Tu t'es pas foulé...",
+    3: "Pense à cliquer la prochaine fois !",
+    4: "La chance du débutant !",
+    5: "Cowboy en carton !",
 };
 let punchLinesBad = { // 1 < clickDelay
     1: "T'es trop nul.",
@@ -57,7 +57,7 @@ let punchLinesBad = { // 1 < clickDelay
     11: "Cowboy en carton !",
     12: "T'étais à ton max ?",
     13: "T'as compris le but du jeu ?",
-    13: "Ça va, t'as pris ton temps ?",
+    14: "Ça va, t'as pris ton temps ?",
 };
 
 goRules.addEventListener("mouseover", function() {
